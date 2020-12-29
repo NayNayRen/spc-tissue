@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--LINK FOR GOOGLE FONT-->
+  <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+<!--LINK FOR THE CSS STYLES-->
+  <link rel="stylesheet" href="issues.css">
+  <title>Subscription</title>
+</head>
+<body>
+  <div class="nav_box" id="nav_box">
+    <div class="nav_a">
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+  <div class="graph_box">
+    <p>This graph displays monthly subscription totals for <strong>Tissue</strong>.<br>These numbers
+    displayed are abreviated thousands.<br> If you are viewing this page, then you have
+    loggen in as the Administrator.</p>
+    <span class="increment_line_0">0</span>
+    <span class="increment_line_50">50</span>
+    <span class="increment_line_100">100</span>
+    <span class="increment_line_150">150</span>
+    <span class="increment_line_200">200</span>
+    <span class="increment_line_250">250</span>
+    <span class="increment_line_300">300</span>
+    <span class="increment_line_350">350</span>
+    <div class="graph_display">
+      <div class="first_months_box">
+        <div id="jan">Jan 40</div>
+        <div id="feb">Feb 10</div>
+        <div id="mar">Mar 100</div>
+        <div id="apr">Apr 65</div>
+        <div id="may">May 75</div>
+        <div id="jun">Jun 120</div>
+      </div>
+      <div class="second_months_box">
+        <div id="jul">Jul 121</div>
+        <div id="aug">Aug 175</div>
+        <div id="sep">Sep 220</div>
+        <div id="oct">Oct 275</div>
+        <div id="nov">Nov 300</div>
+        <div id="dec">Dec 15</div>
+      </div>
+    </div>
+    <div class="graph_button_box">
+      <button class="button" id="view_graph_button">View</button>
+      <button class="button" id="reset_graph_button">Clear</button>
+      <p>Click <strong>'View'</strong> to show statistics of subscriptions.<br>Click <strong>'Clear'</strong>
+      to reset the values.</p>
+    </div>
+  </div>
+  <div class="footer_box">
+    <h5>Built by : Tissue Development &copy; October 2018</h5>
+  </div>
+  <!--LINKS JAVASCRIPT-->
+  <script src="js/subscription-dashboard.js"></script>
+</body>
+</html>
