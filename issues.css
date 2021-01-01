@@ -3,13 +3,12 @@ html{
 }
 
 body {
-  background-attachment: fixed;
-  background-image: url('images/background_2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgba(0,0,0,1);
   font-family: 'Mali', cursive;
-  height: 100%;
+  height: 100vh;
   margin: 0;
+  overflow-x: hidden;
+  padding: 0;
 }
 
 .button {
@@ -47,16 +46,12 @@ body {
 }
 
 .contact_box {
-  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
   background-color: #BDB76B;
-  margin: auto;
+  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
-  width: 98%;
-  min-height: 150px;
   padding: 15px;
   text-align: center;
+  width: 100%;
 }
 
 .delete_button{
@@ -78,23 +73,24 @@ body {
 }
 
 .desc_box {
-  min-height: 300px;
-  padding: 15px;
-  text-align: center;
+  background-color: #F5F5F5;
+  border-bottom: solid 2px #000000;
+  border-top: solid 2px #000000;
+  box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.5), inset -5px 0px 10px rgba(0, 0, 0, 0.5);
   font-size: 20px;
   margin: 20px;
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
-  background-color: #F5F5F5;
-  box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.5), inset -5px 0px 10px rgba(0, 0, 0, 0.5);
+  max-width: 50%;
+  min-height: 300px;
+  padding: 15px;
+  text-align: left;
 }
 
 .display_issues {
   background-color: #999999;
   border: solid 1px #000000;
-  margin: 15px;
+  margin: 15px auto;
+  max-width: 85%;
   min-height: 150px;
-  height: 225px;
   overflow: scroll;
 }
 
@@ -117,12 +113,11 @@ body {
 
 .footer_box {
   box-shadow: inset 5px 0 20px rgba(0, 0, 0, 0.5), inset -5px 0 20px rgba(0, 0, 0, 0.5);
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
   background-color: #FFF8DC;
   padding: 5px;
   text-align: center;
   margin-top: 20px;
+  width: 100%;
 }
 
 .graph_box {
@@ -157,68 +152,79 @@ body {
   text-shadow: none;
 }
 
-.input_box {
-  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 98%;
-  margin: auto;
-  margin-top: 20px;
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
-  background-color: #FFF8DC;
-  padding: 15px;
-  font-size: 20px;
-}
-
-.input_box div, .alter_issues div {
-  margin: 5px;
+.input {
+  margin: 10px 0;
+  max-width: 90%;
+  min-width: 20px;
   padding: 5px;
 }
 
-.issues_box {
-  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: auto;
-  padding: 15px;
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
+.input_box {
+  align-items: center;
   background-color: #FFF8DC;
-  width: 1300px;
-  height: auto;
+  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
+.issues_box {
+  align-items: center;
+  background-color: #FFF8DC;
+  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .issues_box h2 {
+  margin: 0;
   text-shadow: 0 1px 2px #000000;
+}
+
+.issue_desc{
+  height: 100px;
+  width: 90%;
 }
 
 .known_issues, .alter_issues {
   border-top: solid 2px #000000;
   border-bottom: solid 2px #000000;
   box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
+  height: 300px;
+  max-width: 50%;
   margin: 20px;
   background-color: #F5F5F5;
   padding: 10px;
 }
 
 .main_box {
-  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: 60% 40%;
-  text-align: center;
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
+  align-items: center;
   background-color: #BDB76B;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  box-shadow: inset 15px 0 20px rgba(0, 0, 0, 0.5), inset -15px 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0;
   padding: 15px;
-  height: 400px;
-  width: 98%;
+  text-align: center;
+  width: 100%;
 }
 
-.nav_a a {
+.nav_box {
+  background-color: #FFF8DC;
+  border-bottom: solid 2px #000000;
+  border-top: solid 2px #000000;
+  box-shadow: inset 5px 0 20px rgba(0, 0, 0, 0.5), inset -5px 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+
+.nav_box a {
   color: #000000;
   font-size: 150%;
   font-weight: bold;
@@ -229,22 +235,9 @@ body {
   transition: opacity 250ms ease;
 }
 
-.nav_a a:hover {
+.nav_box a:hover {
   opacity: .5;
   transition: opacity 250ms ease;
-}
-
-.nav_box {
-  background-color: #FFF8DC;
-  border-bottom: solid 2px #000000;
-  border-top: solid 2px #000000;
-  box-shadow: inset 5px 0 20px rgba(0, 0, 0, 0.5), inset -5px 0 20px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  width: 100%;
-  z-index: 1;
 }
 
 .register_box, .login_box {
@@ -252,6 +245,8 @@ body {
   border-bottom: solid 2px #000000;
   background-color: #F5F5F5;
   box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 75%;
+  padding: 10px;
 }
 
 .search_box {
@@ -262,7 +257,6 @@ body {
 .social_box {
   text-align: center;
   margin-top: 20px;
-  padding-bottom: 20px;
 }
 
 .title {
@@ -272,14 +266,14 @@ body {
 }
 
 .titan {
-  margin: 50px 0 0 150px;
   border: solid 2px #000000;
   background: url('images/titan.png');
+  background-color: #fff;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 200px;
   position: relative;
-  height: 300px;
   width: 250px;
 }
 
@@ -467,4 +461,56 @@ body {
 
 .sticky+.main_box, .sticky+.graph_box {
   margin-top: 70px;
+}
+
+@media(max-width: 700px){
+
+  .issues_box {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .known_issues, .alter_issues {
+    border-top: solid 2px #000000;
+    border-bottom: solid 2px #000000;
+    box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+}
+
+@media(max-width: 500px){
+
+  .button {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .contact_box {
+    padding: 5px;
+  }
+
+  .desc_box{
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .input_box{
+    padding: 15px 0;
+  }
+
+  .main_box{
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .register_box, .login_box{
+    max-width: 100%;
+  }
 }

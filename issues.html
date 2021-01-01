@@ -14,11 +14,9 @@
 </head>
 <body>
   <div class="nav_box" id="nav_box">
-    <div class="nav_a">
       <a href="index.html">Home</a>
       <a href="#issues">Issues</a>
       <a href="#contact">Contact</a>
-    </div>
   </div>
   <div class="main_box" id="about">
     <div class="desc_box">
@@ -31,7 +29,20 @@
       <div class="caption">Photo curtesy of Saint Petersburg College</div>
     </div>
   </div>
+  <!-- CREATE AND DISPLAY ISSUES -->
   <div class="issues_box" id="issues">
+    <div class="alter_issues">
+      <form name="log_form" id="issue_form">
+        <h2>Log An Issue...</h2><!--Create an issue-->
+        <p><i class="italic">Please feel free to log any current issues here.</i></p>
+          <input type="email" class="input" id="assignee" name="Assignee" placeholder="Enter Users E-Mail..."><br>
+          <textarea class="issue_desc" id="issue_desc" name="Description" placeholder="Give A Brief Description..."></textarea>
+        <div class="button_box">
+          <button type="submit" class="button" id="save_button">Save Issue</button>
+          <button type="reset" class="button">Reset Entry</button>
+        </div>
+      </form>
+    </div>
     <div class="known_issues">
       <h2>Known Issues...</h2><!--Display logged issues-->
       <p><i class="italic">Any issues that have been logged by a user will be displayed here.</i></p>
@@ -39,23 +50,6 @@
         <ol id="display_issue"><!--Display field-->
         </ol>
       </div>
-    </div>
-    <div class="alter_issues">
-      <form name="log_form" id="issue_form">
-        <h2>Log An Issue...</h2><!--Create an issue-->
-        <p><i class="italic">Please feel free to log any current issues here.</i></p>
-        <div>
-          <input type="email" class="assignee" id="assignee" name="Assignee" placeholder="Enter Users E-Mail...">
-          <i class="italic"></i>
-        </div>
-        <div>
-          <textarea class="issue_desc" id="issue_desc" name="Description" rows="6" cols="55" placeholder="Give A Brief Description..."></textarea>
-        </div>
-        <div class="button_box">
-          <input type="submit" class="button" id="save_button" value="Save Issue"></input>
-          <input type="reset" class="button" value="Reset Entry"></input>
-        </div>
-      </form>
     </div>
   </div>
   <div class="contact_box" id="contact">
@@ -70,7 +64,7 @@
     </div>
   </div>
   <div class="footer_box">
-    <h5>Built by : Tissue Development &copy; October 2018</h5>
+    <span>Nate M. October 2018</span>
   </div>
   <script src="js/issues.js" charset="utf-8"></script>
 </body>
