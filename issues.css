@@ -108,6 +108,9 @@ body {
 }
 
 .first_months_box, .second_months_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
 
@@ -121,35 +124,93 @@ body {
 }
 
 .graph_box {
+  align-items: center;
+  background-color: #BDB76B;
+  border-bottom: solid 2px #000000;
+  border-top: solid 2px #000000;
+  box-shadow: inset 15px 0 30px rgba(0, 0, 0, 0.5), inset -15px 0 30px rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: 1fr;
-  position: relative;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  border-top: solid 2px #000000;
-  border-bottom: solid 2px #000000;
-  background-color: #BDB76B;
-  width: 1000px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto 20px auto;
   padding-bottom: 20px;
-  box-shadow: inset 15px 0 30px rgba(0, 0, 0, 0.5), inset -15px 0 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  text-align: center;
+  width: 80%;
 }
 
 .graph_display {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-top: solid 2px #000000;
+  background: linear-gradient(to top, #000000 -80%, #F5F5F5);
   border-bottom: solid 2px #000000;
+  border-top: solid 2px #000000;
   box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
-  margin: auto;
-  background-image: linear-gradient(to top, #000000 -80%, #F5F5F5);
+  display: grid;
+  grid-template-columns: 50% 50%;
   height: 450px;
-  width: 800px;
+  margin: auto;
   padding-bottom: 20px;
-  text-shadow: none;
+  position: relative;
+  width: 800px;
+}
+
+.graph_button_box {
+  border-top: solid 2px #000000;
+  box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
+  width: 800px;
+  margin: auto;
+  background-color: #F5F5F5;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.increment_line_0, .increment_line_50, .increment_line_100, .increment_line_150, .increment_line_200,
+.increment_line_250, .increment_line_300, .increment_line_350 {
+  position: absolute;
+  width: 100%;
+  border-bottom: solid 2px #000000;
+  color: #FFFFFF;
+  text-shadow: 0 2px 1px #000000;
+  text-align: left;
+}
+
+.increment_line_0 {
+  border-width: 5px;
+  bottom: 45px;
+}
+
+.increment_line_50 {
+  border-bottom-style: dashed;
+  bottom: 95px;
+}
+
+.increment_line_100 {
+  border-width: 5px;
+  bottom: 145px;
+}
+
+.increment_line_150 {
+  border-bottom-style: dashed;
+  bottom: 195px;
+}
+
+.increment_line_200 {
+  border-width: 5px;
+  bottom: 245px;
+}
+
+.increment_line_250 {
+  border-bottom-style: dashed;
+  bottom: 295px;
+}
+
+.increment_line_300 {
+  border-width: 5px;
+  bottom: 345px;
+}
+
+.increment_line_350 {
+  border-bottom-style: dashed;
+  bottom: 395px;
 }
 
 .input {
@@ -277,7 +338,7 @@ body {
   width: 250px;
 }
 
-/* GRAPH SETTINGS AND COLORS */
+/* GRAPH BARS SETTINGS AND COLORS */
 #jan, #feb, #mar, #apr, #may, #jun, #jul, #aug, #sep, #oct, #nov, #dec {
   box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
   border: solid 2px #000000;
@@ -288,7 +349,6 @@ body {
   position: absolute;
   width: 40px;
   height: 0;
-  padding: 2px;
   color: #FFFFFF;
   text-shadow: 0 2px 1px #000000;
 }
@@ -353,73 +413,6 @@ body {
   margin-left: 337px;
 }
 
-.graph_button_box {
-  border-top: solid 2px #000000;
-  box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5), inset -5px 0 10px rgba(0, 0, 0, 0.5);
-  width: 800px;
-  margin: auto;
-  background-color: #F5F5F5;
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
-.increment_line_0, .increment_line_50, .increment_line_100, .increment_line_150, .increment_line_200,
-.increment_line_250, .increment_line_300, .increment_line_350 {
-  position: absolute;
-  width: 840px;
-  border-bottom: solid 2px #000000;
-  color: #FFFFFF;
-  text-shadow: 0 2px 1px #000000;
-  text-align: left;
-  margin-left: 60px;
-}
-
-.increment_line_0 {
-  border-width: 7px;
-  bottom: 202px;
-}
-
-.increment_line_50 {
-  border-bottom-style: dashed;
-  bottom: 258px;
-}
-
-.increment_line_100 {
-  border-width: 5px;
-  bottom: 308px;
-}
-
-.increment_line_150 {
-  border-bottom-style: dashed;
-  bottom: 358px;
-}
-
-.increment_line_200 {
-  border-width: 5px;
-  bottom: 408px;
-}
-
-.increment_line_250 {
-  border-bottom-style: dashed;
-  bottom: 458px;
-}
-
-.increment_line_300 {
-  border-width: 5px;
-  bottom: 508px;
-}
-
-.increment_line_350 {
-  border-bottom-style: dashed;
-  bottom: 558px;
-}
-
-.input {
-  width: 300px;
-}
-
-
-
 @-webkit-keyframes mymove {
   50% {
     -webkit-transform: rotate(180deg);
@@ -463,8 +456,16 @@ body {
   margin-top: 70px;
 }
 
-@media(max-width: 700px){
+@media (max-width: 1000px){
+  .graph_box{
+    width: 100%;
+  }
+  .graph_display{
+    width: 100%;
+  }
+}
 
+@media(max-width: 700px){
   .issues_box {
     flex-direction: column;
     justify-content: center;
@@ -479,11 +480,9 @@ body {
     max-width: 100%;
     padding: 10px;
   }
-
 }
 
 @media(max-width: 500px){
-
   .button {
     font-size: 16px;
     padding: 5px;
